@@ -1,4 +1,4 @@
-name: ci
+name: gh-pages deploy
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  ci:
+  gh-pages:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -41,10 +41,20 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies 👨🏻‍💻
-        run: yarn
+        run: yarn install
 
-      - name: Run linter 👀
-        run: yarn lint
+      # - name: Run linter 👀
+      #   run: yarn lint
 
-      - name: Run tests 🧪
-        run: yarn test
+      # - name: Run tests 🧪
+      #   run: yarn test
+
+      - name: Generate static files 📂
+        run: yarn generate
+
+      - name: Deployment
+        uses: peaceiris/actions-gh-pages@v2.5.0
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./dist
