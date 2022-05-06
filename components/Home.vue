@@ -71,6 +71,7 @@
                 </summary> 
                 <div>
                   Created with Vue3 to learn the Vue3 basic and consumes API from backend endpoint that included in the project using json-server, especially on two ways data binding & fetching API.
+                  <br>Becase it has backend, the data is persistent. So please be wise 👍😁👌, thanks.
                   <br>I also add Github Action (Workflows) to automatically deploy compiled static files to Github Pages.
                   <div class="flex items-center gap-1">
                     <icon-github></icon-github> Github Repository: 
