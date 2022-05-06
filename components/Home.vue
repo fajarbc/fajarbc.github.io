@@ -39,7 +39,7 @@
               <details>
                 <summary>
                   <a href="https://github.fajarbc.com/learn-vue-fundamentals/"
-                    class="text-blue-400 underline"
+                    class="text-blue-400 underline ml-4 md:ml-0"
                     target="_blank"
                     title="Learn Vue Fundamentals - Shopping List">
                     Learn Vue Fundamentals - Shopping List
@@ -50,7 +50,7 @@
                   <div class="flex items-center gap-1">
                     <icon-github></icon-github> Github Repository:
                     <a href="https://github.com/fajarbc/learn-vue-fundamentals/"
-                      class="text-blue-400 underline"
+                      class="text-blue-400 underline ml-4 md:ml-0"
                       target="_blank"
                       title="Learn Vue Fundamentals - Github Repository">
                       Learn Vue Fundamentals
@@ -87,7 +87,7 @@
           </ul>
         </p>
       </div>
-      <div class="flex justify-center pt-4 space-x-2">
+      <div class="flex justify-center pt-4 space-x-2 pb-4 md:pb-2">
         <a href="https://github.com/fajarbc" target="_blank">
         <icon-github></icon-github>
           <!-- <svg
