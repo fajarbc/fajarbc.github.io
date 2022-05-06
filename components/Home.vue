@@ -50,7 +50,7 @@
                   <div class="flex items-center gap-1">
                     <icon-github></icon-github> Github Repository:
                     <a href="https://github.com/fajarbc/learn-vue-fundamentals/"
-                      class="text-blue-400 underline ml-4 md:ml-0"
+                      class="text-blue-400 underline"
                       target="_blank"
                       title="Learn Vue Fundamentals - Github Repository">
                       Learn Vue Fundamentals
@@ -63,7 +63,7 @@
               <details open>
                 <summary>
                   <a href="https://github.fajarbc.com/learn-vue3-basic/"
-                    class="text-blue-400 underline"
+                    class="text-blue-400 underline ml-4 md:ml-0"
                     target="_blank"
                     title="Learn Vue3 Basic - Task Reminder">
                     Learn Vue3 Basic - Task Reminder
