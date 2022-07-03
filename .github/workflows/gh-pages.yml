@@ -53,11 +53,11 @@ jobs:
         run: yarn generate
 
       - name: Setting domain ✨
-        run: touch ./output/public/CNAME && echo github.fajarbc.com >> ./output/public/CNAME
+        run: touch .output/public/CNAME && echo github.fajarbc.com >> .output/public/CNAME
 
       - name: Deployment
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./output
+          PUBLISH_DIR: .output/public
