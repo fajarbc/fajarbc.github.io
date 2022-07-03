@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt'
+import postcssConfig from './postcss.config'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -11,5 +12,16 @@ export default defineNuxtConfig({
           { name: 'format-detection', content: 'telephone=no' },
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    },    
+    },
+
+    build: {
+      postcss: {
+        postcssOptions: postcssConfig,
+      },
+    },
+    modules: ['@nuxtjs/color-mode'],
+    colorMode: {
+      preference: 'dracula', // default theme
+      dataValue: 'theme', // activate data-theme in <html> tag
+    },
 })
