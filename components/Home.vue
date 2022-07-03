@@ -32,7 +32,7 @@
             </a>
           </div>
         </div>
-        <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
+        <div class="mt-4 pt-4 text-gray-800 border-t border-dashed">
           For now you can try to open:
           <ul>
             <li class="py-2">
@@ -86,7 +86,7 @@
               </details>
             </li>
           </ul>
-        </p>
+        </div>
       </div>
       <div class="flex justify-center pt-4 space-x-2 pb-4 md:pb-2">
         <a href="https://github.com/fajarbc" target="_blank">
