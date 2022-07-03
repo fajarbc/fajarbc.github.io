@@ -21,7 +21,7 @@
         </h2>
         <div class="mt-3 text-gray-600">
           My name is <span class="underline decoration-wavy decoration-blue" title="@fajarbc">Fajar</span> and I'm planning to build something here, just for fun.
-          <br>FYI, this page is built with Nuxt (Vue2), Tailwind and uses Github Action Workflows for the deployments.
+          <br>FYI, this page is built with Nuxt 3 (Vue 3) as frontend framework, Tailwind as styling, Vite as the build tool and uses Github Action Workflows for the deployments.
           <div class="flex items-center gap-1">
             <icon-github></icon-github> Github Repository:
             <a href="https://github.com/fajarbc/fajarbc.github.io/"
@@ -121,12 +121,6 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import IconGithub from './icons/IconGithub.vue'
-export default {
-  name: 'Home',
-  components: {
-    IconGithub
-  }
-}
 </script>
