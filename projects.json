@@ -1,0 +1,47 @@
+{
+  "projects": [{
+    "demo": "https://github.fajarbc.com/learn-vue-fundamentals/",
+    "title": "Learn Vue Fundamentals - Shopping List",
+    "description": "Created with Vue2 to learn the Vue fundamentals, especially on two ways data binding.",
+    "reposiory": "https://github.com/fajarbc/learn-vue-fundamentals/",
+    "reposiory_title": "Learn Vue Fundamentals"
+  }, {
+    "demo": "https://github.fajarbc.com/learn-vue3-basic/",
+    "title": "Learn Vue3 Basic - Task Reminder",
+    "open_description": true,
+    "description": "Created with Vue3 to learn the Vue3 basic and consumes API from backend endpoint that included in the project using json-server, especially on two ways data binding & fetching API. <br />Because it has backend, the data is persistent. So please be wise 👌, thanks. <br>I also add Github Action (Workflows) to automatically deploy compiled static files to Github Pages.",
+    "reposiory": "https://github.com/fajarbc/learn-vue3-basic/",
+    "reposiory_title": "Learn Vue3 Basic"
+  }, {
+    "demo": "#",
+    "title": "Typescript Monorepo - Chat App",
+    "description": "Learning Monorepo by using Typescript with Express & React to create simple chat app. This project also implement tRPC and WebSockets for real-time feature. Also there is branch called basic-chat-app that using tRPC with React Query to pooling data as an alternative for WebSockets.",
+    "reposiory": "https://github.com/fajarbc/typescript-monorepo",
+    "reposiory_title": "Typescript Monorepo"
+  }, {
+    "demo": "#",
+    "title": "GraphQL Basic - Chat App",
+    "description": "Learning GraphQL with Apollo Server as backend and local database for simplification using lowdb (local json file adapter). Have type User and enum of Gender. Query: get all users, get user by id, and follow (add following and followers data to user in action).",
+    "reposiory": "https://github.com/fajarbc/graphql-basic",
+    "reposiory_title": "GraphQL Basic"
+  }, {
+    "demo": "https://www.npmjs.com/package/anagram-words",
+    "title": "Anagram Words - NPM Package",
+    "description": "Repository of NPM Package I published with simple function, to return anagram words if existed from the given string/text, check if two strings are anagram word. There are 2 functions: findPattern & isAnagram that described well in the readme section.",
+    "reposiory": "https://github.com/fajarbc/anagram-words",
+    "reposiory_title": "Anagram Words"
+  }, {
+    "demo": "#",
+    "title": "ReactPHP Project - Websocket Chats",
+    "description": "Example ReactPHP Project : Websocket Chats. With the help of Thruway as PHP Router Library for Autobahn (use autobahn-browser as a client) Real-Time Application Messaging.",
+    "reposiory": "https://github.com/fajarbc/reactphp-thruway-websocket-chats",
+    "reposiory_title": "ReactPHP Thruway - Websocket Chats"
+  }, {
+    "demo": "#",
+    "title": "Image Augmentation for ML",
+    "open_description": true,
+    "description": "Image augmentation for machine learning experiments. Based on aleju/imgaug and implemetation of asetkn. It basically Jupyter Notebook with ready to use script which supposed to create augmentation of the given images. The images need to be labelled or annotated. The output is augmented version of the images and its annotation files in .xml PASCAL POC format.",
+    "reposiory": "https://github.com/fajarbc/imgaug-bbox",
+    "reposiory_title": "Image Augmentation for ML"
+  }]
+}

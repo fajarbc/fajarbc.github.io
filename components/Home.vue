@@ -1,88 +1,72 @@
 <!-- Please remove this file from your project -->
 <template>
   <div
-    class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0"
+    class="relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0"
   >
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
-      <a
-        class="flex justify-center pt-8 sm:pt-0 uppercase text-4xl overline decoration-dotted decoration-blue-400"
-        href="https://github.fajarbc.com"
-        target="_blank"
-      >
-      github.fajarbc.com
-      </a>
-      <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
-        <h2 class="text-2xl leading-7 font-semibold">
-          Hi there,
-        </h2>
-        <div class="mt-3 text-gray-600">
-          My name is <span class="underline decoration-wavy decoration-blue" title="@fajarbc">Fajar</span> and I'm planning to build something here, just for fun.
-          <br>FYI, this page is built with Nuxt 3 (Vue 3) as frontend framework, Tailwind as styling, Vite as the build tool and uses Github Action Workflows for the deployments.
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-center gap-4">
+        <a
+          class="flex justify-center pt-8 sm:pt-2 uppercase text-2xl md:text-4xl"
+          href="https://github.fajarbc.com"
+          target="_blank"
+        >
+          github.fajarbc.com
+        </a>
+      </div>
+      <div class="mt-8 bg-base-200 overflow-hidden shadow sm:rounded-lg p-6">
+        <h2 class="text-2xl leading-7 font-semibold">Hi there,</h2>
+        <div class="mt-3">
+          My name is
+          <span
+            class="underline decoration-wavy decoration-blue"
+            title="@fajarbc"
+            >Fajar</span
+          >
+          and I'm planning to build something here, just for fun. <br />FYI,
+          this page is built with Nuxt 3 (Vue 3) as frontend framework, Tailwind
+          as styling, Vite as the build tool and uses Github Action Workflows
+          for the deployments.
           <div class="flex items-center gap-1">
             <icon-github></icon-github> Github Repository:
-            <a href="https://github.com/fajarbc/fajarbc.github.io/"
-              class="text-blue-400 underline"
+            <a
+              href="https://github.com/fajarbc/fajarbc.github.io/"
+              class="underline"
               target="_blank"
-              title="fajarbc.github.io">
+              title="fajarbc.github.io"
+            >
               fajarbc.github.io
             </a>
           </div>
         </div>
-        <div class="mt-4 pt-4 text-gray-800 border-t border-dashed">
+        <div class="mt-4 pt-4 border-t border-dashed">
           For now you can try to open:
-          <ul>
+          <ul v-for="project in projects" :key="project.title">
             <li class="py-2">
-              <details>
+              <details :open="project.open_description">
                 <summary>
-                  <a href="https://github.fajarbc.com/learn-vue-fundamentals/"
-                    class="text-blue-400 underline ml-4 md:ml-0"
+                  <a
+                    :href="`${project.demo ?? '#'}`"
+                    class="underline ml-4 md:ml-0"
                     target="_blank"
-                    title="Learn Vue Fundamentals - Shopping List">
-                    Learn Vue Fundamentals - Shopping List
+                    :title="`${project.title ? 'Demo of '+ project.title : 'No Demo'}`"
+                  >
+                  {{project.title}}
                   </a>
-                </summary> 
+                </summary>
                 <div>
-                  Created with Vue2 to learn the Vue fundamentals, especially on two ways data binding.
+                  <span v-html="project.description"></span>
                   <div class="flex items-center gap-1">
                     <icon-github></icon-github> Github Repository:
-                    <a href="https://github.com/fajarbc/learn-vue-fundamentals/"
-                      class="text-blue-400 underline"
+                    <a
+                      :href="project.reposiory"
+                      class="underline"
                       target="_blank"
-                      title="Learn Vue Fundamentals - Github Repository">
-                      Learn Vue Fundamentals
+                      :title="`${project.reposiory_title} - Github Repository`"
+                    >
+                      {{ project.reposiory_title }}
                     </a>
                   </div>
-                </div> 
-              </details>
-            </li>
-            <li class="py-2">
-              <details open>
-                <summary>
-                  <a href="https://github.fajarbc.com/learn-vue3-basic/"
-                    class="text-blue-400 underline ml-4 md:ml-0"
-                    target="_blank"
-                    title="Learn Vue3 Basic - Task Reminder">
-                    Learn Vue3 Basic - Task Reminder
-                  </a>
-                </summary> 
-                <div>
-                  Created with Vue3 to learn the Vue3 basic and consumes API from backend endpoint that included in the project using json-server, especially on two ways data binding & fetching API.
-                  <br>Because it has backend, the data is persistent. So please be wise 👍😁👌, thanks.
-                  <br>I also add Github Action (Workflows) to automatically deploy compiled static files to Github Pages.
-                  <div class="flex items-center gap-1">
-                    <icon-github></icon-github> Github Repository: 
-                    <a href="https://github.com/fajarbc/learn-vue3-basic/"
-                      class="text-blue-400 underline"
-                      target="_blank"
-                      title="Learn Vue3 Basic - Github Repository">
-                      Learn Vue3 Basic
-                    </a>
-                  </div> 
-                </div> 
+                </div>
               </details>
             </li>
           </ul>
@@ -90,22 +74,11 @@
       </div>
       <div class="flex justify-center pt-4 space-x-2 pb-4 md:pb-2">
         <a href="https://github.com/fajarbc" target="_blank">
-        <icon-github></icon-github>
-          <!-- <svg
-            class="w-6 h-6 text-gray-600 hover:text-gray-800 button--github"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-            />
-          </svg> -->
+          <icon-github></icon-github>
         </a>
         <a href="https://linkedin.com/in/fajarbc" target="_blank">
           <svg
-            class="w-6 h-6 text-gray-600 hover:text-gray-800 button--github"
+            class="w-6 h-6 button--github"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -117,10 +90,15 @@
           </svg>
         </a>
       </div>
+      <div class="flex justify-center mb-4">
+        <ThemeOption></ThemeOption>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import IconGithub from './icons/IconGithub.vue'
+import IconGithub from "./icons/IconGithub.vue";
+import ThemeOption from "./ThemeOption.vue";
+import { projects } from "../projects.json";
 </script>
