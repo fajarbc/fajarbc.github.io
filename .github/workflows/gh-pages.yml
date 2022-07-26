@@ -52,8 +52,12 @@ jobs:
       - name: Generate static files 📂
         run: yarn generate
 
-#       - name: Setting domain ✨
-#         run: touch .output/public/CNAME && echo github.fajarbc.com >> .output/public/CNAME
+      - name: Setting domain ✨
+        run: touch .output/public/CNAME && echo github.fajarbc.com >> .output/public/CNAME
+
+      # Workaround directory _nuxt ignored by jeckyll
+      - name: Special for _nuxt 👀
+        run: touch .output/public/.nojekyll
 
       - name: Deployment
         uses: peaceiris/actions-gh-pages@v2.5.0
