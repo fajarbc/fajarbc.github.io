@@ -20,7 +20,6 @@ const colorMode = useColorMode();
 const themes = ["light", "dark", "cupcake", "cyberpunk", "valentine", "aqua", "wireframe", "dracula", "night", "coffee"];
 
 function changeTheme(event, theme) {
-  console.log(theme);
   colorMode.preference = theme
 }
 </script>
