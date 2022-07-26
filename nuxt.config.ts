@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     },
     modules: ['@nuxtjs/color-mode'],
     colorMode: {
-      preference: 'dracula', // default theme
+      preference: 'wireframe', // default theme
       dataValue: 'theme', // activate data-theme in <html> tag
     },
 })
