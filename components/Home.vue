@@ -3,10 +3,10 @@
   <div
     class="relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0"
   >
-    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
       <div class="flex justify-center gap-4">
         <a
-          class="flex justify-center pt-8 sm:pt-0 uppercase text-4xl"
+          class="flex justify-center pt-8 sm:pt-2 uppercase text-2xl md:text-4xl"
           href="https://github.fajarbc.com"
           target="_blank"
         >
@@ -40,66 +40,30 @@
         </div>
         <div class="mt-4 pt-4 border-t border-dashed">
           For now you can try to open:
-          <ul>
+          <ul v-for="project in projects" :key="project.title">
             <li class="py-2">
-              <details>
+              <details :open="project.open_description">
                 <summary>
                   <a
-                    href="https://github.fajarbc.com/learn-vue-fundamentals/"
+                    :href="`${project.demo ?? '#'}`"
                     class="underline ml-4 md:ml-0"
                     target="_blank"
-                    title="Learn Vue Fundamentals - Shopping List"
+                    :title="`${project.title ? 'Demo of '+ project.title : 'No Demo'}`"
                   >
-                    Learn Vue Fundamentals - Shopping List
+                  {{project.title}}
                   </a>
                 </summary>
                 <div>
-                  Created with Vue2 to learn the Vue fundamentals, especially on
-                  two ways data binding.
+                  <span v-html="project.description"></span>
                   <div class="flex items-center gap-1">
                     <icon-github></icon-github> Github Repository:
                     <a
-                      href="https://github.com/fajarbc/learn-vue-fundamentals/"
+                      :href="project.reposiory"
                       class="underline"
                       target="_blank"
-                      title="Learn Vue Fundamentals - Github Repository"
+                      :title="`${project.reposiory_title} - Github Repository`"
                     >
-                      Learn Vue Fundamentals
-                    </a>
-                  </div>
-                </div>
-              </details>
-            </li>
-            <li class="py-2">
-              <details open>
-                <summary>
-                  <a
-                    href="https://github.fajarbc.com/learn-vue3-basic/"
-                    class="underline ml-4 md:ml-0"
-                    target="_blank"
-                    title="Learn Vue3 Basic - Task Reminder"
-                  >
-                    Learn Vue3 Basic - Task Reminder
-                  </a>
-                </summary>
-                <div>
-                  Created with Vue3 to learn the Vue3 basic and consumes API
-                  from backend endpoint that included in the project using
-                  json-server, especially on two ways data binding & fetching
-                  API.
-                  <br />Because it has backend, the data is persistent. So
-                  please be wise 👍😁👌, thanks. <br />I also add Github Action
-                  (Workflows) to automatically deploy compiled static files to
-                  Github Pages.
-                  <div class="flex items-center gap-1">
-                    <icon-github></icon-github> Github Repository:
-                    <a
-                      href="https://github.com/fajarbc/learn-vue3-basic/"
-                      class="underline"
-                      target="_blank"
-                      title="Learn Vue3 Basic - Github Repository"
-                    >
-                      Learn Vue3 Basic
+                      {{ project.reposiory_title }}
                     </a>
                   </div>
                 </div>
@@ -126,9 +90,9 @@
           </svg>
         </a>
       </div>
-    <div class="flex justify-center">
-      <ThemeOption></ThemeOption>
-    </div>
+      <div class="flex justify-center mb-4">
+        <ThemeOption></ThemeOption>
+      </div>
     </div>
   </div>
 </template>
@@ -136,4 +100,5 @@
 <script setup>
 import IconGithub from "./icons/IconGithub.vue";
 import ThemeOption from "./ThemeOption.vue";
+import { projects } from "../projects.json";
 </script>
