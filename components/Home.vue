@@ -12,7 +12,6 @@
         >
           github.fajarbc.com
         </a>
-        <ThemeOption></ThemeOption>
       </div>
       <div class="mt-8 bg-base-200 overflow-hidden shadow sm:rounded-lg p-6">
         <h2 class="text-2xl leading-7 font-semibold">Hi there,</h2>
@@ -127,6 +126,9 @@
           </svg>
         </a>
       </div>
+    <div class="flex justify-center">
+      <ThemeOption></ThemeOption>
+    </div>
     </div>
   </div>
 </template>
