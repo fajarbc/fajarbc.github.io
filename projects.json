@@ -1,12 +1,12 @@
 {
   "projects": [{
-    "demo": "https://github.fajarbc.com/learn-vue-fundamentals/",
+    "demo": "https://fajarbc.github.io/learn-vue-fundamentals/",
     "title": "Learn Vue Fundamentals - Shopping List",
     "description": "Created with Vue2 to learn the Vue fundamentals, especially on two ways data binding.",
     "reposiory": "https://github.com/fajarbc/learn-vue-fundamentals/",
     "reposiory_title": "Learn Vue Fundamentals"
   }, {
-    "demo": "https://github.fajarbc.com/learn-vue3-basic/",
+    "demo": "https://fajarbc.github.io/learn-vue3-basic/",
     "title": "Learn Vue3 Basic - Task Reminder",
     "open_description": true,
     "description": "Created with Vue3 to learn the Vue3 basic and consumes API from backend endpoint that included in the project using json-server, especially on two ways data binding & fetching API. <br />Because it has backend, the data is persistent. So please be wise 👌, thanks. <br>I also add Github Action (Workflows) to automatically deploy compiled static files to Github Pages.",
@@ -29,7 +29,8 @@
     "title": "Anagram Words - NPM Package",
     "description": "Repository of NPM Package I published with simple function, to return anagram words if existed from the given string/text, check if two strings are anagram word. There are 2 functions: findPattern & isAnagram that described well in the readme section.",
     "reposiory": "https://github.com/fajarbc/anagram-words",
-    "reposiory_title": "Anagram Words"
+    "reposiory_title": "Anagram Words",
+    "open_description": true
   }, {
     "demo": "#",
     "title": "ReactPHP Project - Websocket Chats",
