@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="w-6 h-6 text-gray-600 hover:text-gray-800 button--github"
+    class="w-6 h-6 text-gray-600 hover:text-gray-800"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"

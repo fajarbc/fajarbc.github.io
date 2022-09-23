@@ -40,6 +40,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
+      - name: Copy env file 📝
+        run: cp env .env
+
       - name: Install dependencies 👨🏻‍💻
         run: yarn install
 
