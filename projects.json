@@ -25,7 +25,7 @@
     "reposiory": "https://github.com/fajarbc/graphql-basic",
     "reposiory_title": "GraphQL Basic"
   }, {
-    "demo": "https://fajarbc.github.io/anagram-words/",
+    "demo": "https://npmjs.com/anagram-words/",
     "title": "Anagram Words - NPM Package",
     "description": "Repository of NPM Package I published with simple function, to return anagram words if existed from the given string/text, check if two strings are anagram word. There are 2 functions: findPattern & isAnagram that described well in the readme section.",
     "reposiory": "https://github.com/fajarbc/anagram-words",
