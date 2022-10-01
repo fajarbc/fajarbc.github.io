@@ -25,11 +25,11 @@
     "reposiory": "https://github.com/fajarbc/graphql-basic",
     "reposiory_title": "GraphQL Basic"
   }, {
-    "demo": "https://npmjs.com/anagram-words/",
-    "title": "Anagram Words - NPM Package",
-    "description": "Repository of NPM Package I published with simple function, to return anagram words if existed from the given string/text, check if two strings are anagram word. There are 2 functions: findPattern & isAnagram that described well in the readme section.",
-    "reposiory": "https://github.com/fajarbc/anagram-words",
-    "reposiory_title": "Anagram Words",
+    "demo": "https://npmjs.com/anagram-palindrome/",
+    "title": "Anagram Palindrome - NPM Package",
+    "description": "Repository of NPM Package I published with simple function. Find anagram words if existed from the given pattern. Check if two strings are anagram. Check if the given word is palindrome.",
+    "reposiory": "https://github.com/fajarbc/anagram-palindrome",
+    "reposiory_title": "Anagram Palindrome",
     "open_description": true
   }, {
     "demo": "https://github.com/fajarbc/reactphp-thruway-websocket-chats",
