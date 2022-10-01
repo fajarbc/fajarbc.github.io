@@ -1,5 +1,18 @@
 {
   "projects": [{
+    "demo": "https://npmjs.com/anagram-palindrome/",
+    "title": "Anagram Palindrome - NPM Package",
+    "description": "Repository of NPM Package I published with simple function. Find anagram words if existed from the given pattern. Check if two strings are anagram. Check if the given word is palindrome.",
+    "reposiory": "https://github.com/fajarbc/anagram-palindrome",
+    "reposiory_title": "Anagram Palindrome",
+    "open_description": true
+  }, {
+    "demo": "https://github.com/fajarbc/reactphp-thruway-websocket-chats",
+    "title": "ReactPHP Project - Websocket Chats",
+    "description": "Example ReactPHP Project : Websocket Chats. With the help of Thruway as PHP Router Library for Autobahn (use autobahn-browser as a client) Real-Time Application Messaging.",
+    "reposiory": "https://github.com/fajarbc/reactphp-thruway-websocket-chats",
+    "reposiory_title": "ReactPHP Thruway - Websocket Chats"
+  }, {
     "demo": "https://fajarbc.github.io/learn-vue-fundamentals/",
     "title": "Learn Vue Fundamentals - Shopping List",
     "description": "Created with Vue2 to learn the Vue fundamentals, especially on two ways data binding.",
@@ -24,19 +37,6 @@
     "description": "Learning GraphQL with Apollo Server as backend and local database for simplification using lowdb (local json file adapter). Have type User and enum of Gender. Query: get all users, get user by id, and follow (add following and followers data to user in action).",
     "reposiory": "https://github.com/fajarbc/graphql-basic",
     "reposiory_title": "GraphQL Basic"
-  }, {
-    "demo": "https://npmjs.com/anagram-palindrome/",
-    "title": "Anagram Palindrome - NPM Package",
-    "description": "Repository of NPM Package I published with simple function. Find anagram words if existed from the given pattern. Check if two strings are anagram. Check if the given word is palindrome.",
-    "reposiory": "https://github.com/fajarbc/anagram-palindrome",
-    "reposiory_title": "Anagram Palindrome",
-    "open_description": true
-  }, {
-    "demo": "https://github.com/fajarbc/reactphp-thruway-websocket-chats",
-    "title": "ReactPHP Project - Websocket Chats",
-    "description": "Example ReactPHP Project : Websocket Chats. With the help of Thruway as PHP Router Library for Autobahn (use autobahn-browser as a client) Real-Time Application Messaging.",
-    "reposiory": "https://github.com/fajarbc/reactphp-thruway-websocket-chats",
-    "reposiory_title": "ReactPHP Thruway - Websocket Chats"
   }, {
     "demo": "https://github.com/fajarbc/imgaug-bbox",
     "title": "Image Augmentation for ML",
