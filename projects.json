@@ -2,7 +2,7 @@
   "projects": [{
     "demo": "https://npmjs.com/anagram-palindrome/",
     "title": "Anagram Palindrome - NPM Package",
-    "description": "Repository of NPM Package I published with simple function. Find anagram words if existed from the given pattern. Check if two strings are anagram. Check if the given word is palindrome.",
+    "description": "Repository of NPM Package I published with simple function. Find anagram words if existed from the given pattern. Check if two strings are anagram. Check if the given word is palindrome. I also using jsdoc3 to automatically create API Documentation by convert comments in files into beautiful and orginize pages, which also deployed via Github Action. Not only I use Gihub Action for API Documentation and Github Pages (with Jeckyll) itself, but also to publish patch, minor, major update this NPM Package at npmjs.com and auto update it's version and changelog in the repository.<br>Visit <a href=\"https://fajarbc.github.io/anagram-palindrome\" target=\"_blank\">Github Page for this repo here</a> or directly visit <a href=\"https://fajarbc.github.io/anagram-palindrome/api-docs/index.html\" target=\"_blank\">API Documentation page</a>.",
     "reposiory": "https://github.com/fajarbc/anagram-palindrome",
     "reposiory_title": "Anagram Palindrome",
     "open_description": true
