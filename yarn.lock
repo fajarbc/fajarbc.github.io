@@ -301,10 +301,10 @@
   resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.7.2.tgz#da0bb42bcc3e21636f8621322115c3a93adf2331"
   integrity sha512-nmmFpQxnAy6zgf5r0pwdAH3Qw2IsSbTgvkpov9RkEVE8A6aPAT4iaAaPEAzdI+sPL5Wby05mhciJXSqtkLu+vQ==
 
-"@heroicons/vue@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@heroicons/vue/-/vue-1.0.6.tgz#d8b90734b436eb5a87f40cc300b64a0fb0031f7f"
-  integrity sha512-ng2YcCQrdoQWEFpw+ipFl2rZo8mZ56v0T5+MyfQQvNqfKChwgP6DMloZLW+rl17GEcHkE3H82UTAMKBKZr4+WA==
+"@heroicons/vue@^2.0.12":
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/@heroicons/vue/-/vue-2.0.12.tgz#45b97946731721269dd4141035af338a1ef88f35"
+  integrity sha512-ypuQl/Wei7BoShO65AdRVikXDaSt6hJBRuKs2pVd/6HvxfEz18oXraH+J5G/QPIwObMEVhMb6nkOs9l3WZv/gA==
 
 "@ioredis/commands@^1.1.1":
   version "1.2.0"
