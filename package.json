@@ -9,7 +9,7 @@
   "devDependencies": {
     "@headlessui/vue": "^1.6.5",
     "@heroicons/vue": "^1.0.6",
-    "@nuxtjs/color-mode": "^3.1.4",
+    "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/tailwindcss": "^5.1.2",
     "autoprefixer": "^10.4.7",
     "daisyui": "^2.15.3",
