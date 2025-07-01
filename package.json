@@ -11,7 +11,7 @@
     "@heroicons/vue": "^1.0.6",
     "@nuxtjs/color-mode": "^3.1.4",
     "@nuxtjs/tailwindcss": "^5.1.2",
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.21",
     "daisyui": "^2.15.3",
     "install": "^0.13.0",
     "nuxt": "^3.0.0-rc.11",
