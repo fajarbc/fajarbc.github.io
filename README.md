@@ -66,4 +66,4 @@ For deployment, add these secrets to your GitHub repository:
 
 Automatically deploys to GitHub Pages on push to main branch via GitHub Actions.
 
-Live site: https://fajarbc.github.io/fajarbc.github.io/
+Live site: https://fajarbc.github.io/
