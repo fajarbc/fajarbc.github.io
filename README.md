@@ -41,7 +41,6 @@ JOB_TITLE=Your Job Title
 
 # Contact Information
 CONTACT_EMAIL=your.email@example.com
-PHONE_NUMBER=+1234567890
 
 # Social Media Links
 GITHUB_URL=https://github.com/yourusername
@@ -58,7 +57,6 @@ For deployment, add these secrets to your GitHub repository:
    - `CONTACT_EMAIL`
    - `GITHUB_URL`
    - `LINKEDIN_URL`
-   - `PHONE_NUMBER`
    - `FULL_NAME`
    - `JOB_TITLE`
 

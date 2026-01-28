@@ -29,7 +29,6 @@ jobs:
           CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
           GITHUB_URL: ${{ secrets.GITHUB_URL }}
           LINKEDIN_URL: ${{ secrets.LINKEDIN_URL }}
-          PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
           FULL_NAME: ${{ secrets.FULL_NAME }}
           JOB_TITLE: ${{ secrets.JOB_TITLE }}
           CAREER_START_DATE: ${{ secrets.CAREER_START_DATE }}
