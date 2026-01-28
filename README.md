@@ -43,7 +43,7 @@ JOB_TITLE=Your Job Title
 CONTACT_EMAIL=your.email@example.com
 
 # Social Media Links
-GITHUB_URL=https://github.com/yourusername
+URL_GITHUB=https://github.com/yourusername
 LINKEDIN_URL=https://linkedin.com/in/yourusername
 
 ```
@@ -55,7 +55,7 @@ For deployment, add these secrets to your GitHub repository:
 2. Add the following secrets:
    - `IS_AVAILABLE_FOR_HIRE`
    - `CONTACT_EMAIL`
-   - `GITHUB_URL`
+   - `URL_GITHUB`
    - `LINKEDIN_URL`
    - `FULL_NAME`
    - `JOB_TITLE`

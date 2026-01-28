@@ -25,13 +25,13 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          IS_AVAILABLE_FOR_HIRE: ${{ secrets.IS_AVAILABLE_FOR_HIRE }}
-          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
-          GITHUB_URL: ${{ secrets.GITHUB_URL }}
-          LINKEDIN_URL: ${{ secrets.LINKEDIN_URL }}
-          FULL_NAME: ${{ secrets.FULL_NAME }}
-          JOB_TITLE: ${{ secrets.JOB_TITLE }}
-          CAREER_START_DATE: ${{ secrets.CAREER_START_DATE }}
+          IS_AVAILABLE_FOR_HIRE: ${{ vars.IS_AVAILABLE_FOR_HIRE }}
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          URL_GITHUB: ${{ vars.URL_GITHUB }}
+          LINKEDIN_URL: ${{ vars.LINKEDIN_URL }}
+          FULL_NAME: ${{ vars.FULL_NAME }}
+          JOB_TITLE: ${{ vars.JOB_TITLE }}
+          CAREER_START_DATE: ${{ vars.CAREER_START_DATE }}
           
       - name: Add .nojekyll file
         run: touch ./dist/.nojekyll

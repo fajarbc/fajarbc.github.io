@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
       define: {
         'process.env.IS_AVAILABLE_FOR_HIRE': JSON.stringify(env.IS_AVAILABLE_FOR_HIRE),
         'process.env.CONTACT_EMAIL': JSON.stringify(env.CONTACT_EMAIL),
-        'process.env.GITHUB_URL': JSON.stringify(env.GITHUB_URL),
+        'process.env.URL_GITHUB': JSON.stringify(env.URL_GITHUB),
         'process.env.LINKEDIN_URL': JSON.stringify(env.LINKEDIN_URL),
         'process.env.FULL_NAME': JSON.stringify(env.FULL_NAME),
         'process.env.JOB_TITLE': JSON.stringify(env.JOB_TITLE),

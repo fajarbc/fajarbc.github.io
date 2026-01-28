@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'email@example.com';
-  const GITHUB_URL = process.env.GITHUB_URL || '#';
+  const URL_GITHUB = process.env.URL_GITHUB || '#';
   const LINKEDIN_URL = process.env.LINKEDIN_URL || '#';
   const FULL_NAME = process.env.FULL_NAME || 'Fajar Budi Cahyanto';
   const JOB_TITLE = process.env.JOB_TITLE || 'AI Infrastructure & Cloud Architect';
@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="flex gap-6">
-          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-cyan-400 transition-colors">
+          <a href={URL_GITHUB} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-cyan-400 transition-colors">
             <Github size={20} />
           </a>
           <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-purple-400 transition-colors">
