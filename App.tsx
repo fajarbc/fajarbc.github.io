@@ -83,7 +83,7 @@ function App() {
                      <div className="h-px bg-slate-800 flex-grow"></div>
                      <a 
                         onClick={() => setShowArchive(true)}
-                        className="hidden md:flex items-center gap-1 text-sm text-slate-500 hover:text-cyan-400 transition-colors cursor-pointer"
+                        className="flex items-center gap-1 text-sm text-slate-500 hover:text-cyan-400 transition-colors cursor-pointer"
                      >
                         View Archive <ArrowRight size={14} />
                      </a>
