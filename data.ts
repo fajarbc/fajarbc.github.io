@@ -1,4 +1,4 @@
-import { Project } from './types';
+import { Project, TechCategory } from './types';
 
 export const projects: Project[] = [
   {
@@ -21,8 +21,8 @@ export const projects: Project[] = [
   },
   {
     title: "Async Vision Pipeline",
-    description: "Architected a non-blocking computer vision pipeline using RabbitMQ and WebSockets, allowing real-time photo processing without main-thread blocking.",
-    tags: ["RabbitMQ", "WebSockets", "Python", "NodeJS"],
+    description: "Architected a non-blocking computer vision pipeline using RabbitMQ and Websocket, allowing real-time photo processing without main-thread blocking.",
+    tags: ["RabbitMQ", "Websocket", "Python", "NodeJS"],
     category: "AI"
   },
   {
@@ -70,7 +70,7 @@ export const projects: Project[] = [
   {
     title: "Education & Hospitality Solutions",
     description: "Delivered backend and frontend development for tailored software solutions designed for Japanese education & hospitality companies, creating innovative IT solutions for international clients.",
-    tags: ["Backend", "Frontend", "International", "Custom Solutions"],
+    tags: ["Backend", "Frontend", "Custom Solutions"],
     category: "Infrastructure"
   },
   {
@@ -84,5 +84,47 @@ export const projects: Project[] = [
     description: "Coordinated and led technical trainings as Head of Robotic Club of Physics. Designed and assembled robotics line-followers & digital scoreboard system.",
     tags: ["Robotics", "Leadership", "Training", "Electronics"],
     category: "IoT"
+  }
+];
+
+
+export const chapters = [
+  { id: 'hero', label: 'Home' },
+  { id: 'tech-arsenal', label: 'Skills' },
+  { id: 'case-studies', label: 'Projects' },
+  { id: 'contact', label: 'Contact' },
+] as const;
+
+export const socialLinks = [
+  { platform: 'github', url: process.env.URL_GITHUB || '#', icon: 'Github' },
+  { platform: 'linkedin', url: process.env.LINKEDIN_URL || '#', icon: 'Linkedin' },
+  { platform: 'email', url: `mailto:${process.env.CONTACT_EMAIL || 'email@example.com'}`, icon: 'Mail' },
+] as const;
+
+export const techCategories: TechCategory[] = [
+  {
+    title: "Cloud Native & DevOps",
+    items: ["Docker", "AWS", "GCP", "Terraform", "RabbitMQ", "GitLab CI/CD", "GitHub Actions", "Bash Scripting", "Nginx", "GKE (Kubernetes)"],
+    color: "cyan"
+  },
+  {
+    title: "AI & Data Engineering",
+    items: ["YOLO", "TensorFlow", "Computer Vision", "LLM", "MLflow", "AI Inference Serving"],
+    color: "purple"
+  },
+  {
+    title: "Core Backend",
+    items: ["Node.js", "Go (Golang)", "PHP", "Python", "MySQL", "PostgreSQL", "InfluxDB", "MongoDB", "Redis", "GraphQL", "gRPC"],
+    color: "emerald"
+  },
+  {
+    title: "Frontend & Mobile",
+    items: ["React", "TypeScript", "Vite", "Tailwind", "Bootstrap", "PWA", "Flutter", "Websocket", "REST APIs"],
+    color: "blue"
+  },
+  {
+    title: "Monitoring & Observability",
+    items: ["Prometheus", "Grafana", "Node Exporter", "Alertmanager", "CloudWatch"],
+    color: "orange"
   }
 ];

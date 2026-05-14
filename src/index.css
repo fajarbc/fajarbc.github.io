@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #020617;
   color: #94a3b8;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 ::-webkit-scrollbar {
@@ -21,6 +27,62 @@ body {
   background: #475569;
 }
 
+/* Focus indicator styles - 3:1+ contrast against dark backgrounds */
+:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 2px;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* Animation utility classes */
+.animate-fade-in {
+  animation: fadeIn 600ms ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 600ms ease-out forwards;
+}
+
+/* Scroll-snap utilities */
+.snap-y-mandatory {
+  scroll-snap-type: y mandatory;
+}
+.snap-start {
+  scroll-snap-align: start;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Easter Egg: Glitch effect */
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -45,6 +107,7 @@ body {
   text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
 }
 
+/* Easter Egg: Tooltip arrow */
 .tooltip-arrow::after {
   content: "";
   position: absolute;
@@ -54,4 +117,46 @@ body {
   border-width: 5px;
   border-style: solid;
   border-color: #334155 transparent transparent transparent;
+}
+
+/* Easter Egg: Shimmer text effect */
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Easter Egg: Physics animations */
+@keyframes rumble {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(1px, 1px) rotate(1deg); }
+  50% { transform: translate(-1px, -1px) rotate(-1deg); }
+  75% { transform: translate(-1px, 1px) rotate(0deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes grow {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shrinkOut {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.15); }
+  100% { transform: scale(0); }
+}
+
+.animate-shimmer {
+  animation: shimmer 5s linear infinite;
+}
+
+.animate-rumble {
+  animation: rumble 0.1s linear infinite;
+}
+
+.animate-grow {
+  animation: grow 3s ease-out forwards;
+}
+
+.animate-shrink-out {
+  animation: shrinkOut 1s ease-in forwards;
 }
