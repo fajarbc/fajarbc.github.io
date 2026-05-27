@@ -241,7 +241,7 @@ export function TechArsenal() {
     <ChapterSection id="tech-arsenal" aria-label="Technical Arsenal" className="flex items-center justify-center px-4 py-16">
       <div className="w-full max-w-6xl mx-auto">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-100 text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-12">
             Technical Arsenal
           </h2>
         </ScrollReveal>
@@ -266,23 +266,23 @@ export function TechArsenal() {
         {/* Stats & Easter Egg Buttons */}
         <ScrollReveal delay={600}>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-center">
-            <div className="text-slate-300">
-              <span className="text-2xl font-bold text-indigo-400">{yearsExp}+</span>
-              <span className="ml-2 text-sm text-slate-400">Years of Experience</span>
+            <div className="text-slate-600">
+              <span className="text-2xl font-bold text-indigo-600">{yearsExp}+</span>
+              <span className="ml-2 text-sm text-slate-500">Years of Experience</span>
             </div>
 
-            <div className="h-8 w-px bg-slate-700" aria-hidden="true" />
+            <div className="h-8 w-px bg-slate-200" aria-hidden="true" />
 
             {/* Physics Easter Egg Button */}
             <div className="relative group">
               <button
                 onClick={triggerBlackHole}
                 disabled={isPhysicsActive}
-                className="relative cursor-pointer px-4 py-2 rounded-lg border border-slate-600/50 bg-slate-800/50 text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-[length:400%_100%] animate-shimmer hover:border-purple-500/50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="relative cursor-pointer px-4 py-2 rounded-lg border border-slate-200 bg-white/80 text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 bg-[length:400%_100%] animate-shimmer hover:border-purple-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 PHYSICS BACKGROUND
               </button>
-              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 rounded bg-slate-700 text-xs text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap tooltip-arrow">
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 rounded bg-slate-200 text-xs text-slate-700 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap tooltip-arrow">
                 Warning: Unstable Gravity
               </div>
             </div>
@@ -292,11 +292,11 @@ export function TechArsenal() {
               <button
                 onClick={handleSort}
                 disabled={isAnimating}
-                className="relative cursor-pointer px-4 py-2 rounded-lg border border-slate-600/50 bg-slate-800/50 text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 bg-[length:400%_100%] animate-shimmer hover:border-cyan-500/50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="relative cursor-pointer px-4 py-2 rounded-lg border border-slate-200 bg-white/80 text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-emerald-500 to-cyan-600 bg-[length:400%_100%] animate-shimmer hover:border-cyan-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 TECH LEAD
               </button>
-              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 rounded bg-slate-700 text-xs text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap tooltip-arrow">
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 rounded bg-slate-200 text-xs text-slate-700 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap tooltip-arrow">
                 {isSorted ? 'Restore the chaos!' : 'Line up the chaos!'}
               </div>
             </div>

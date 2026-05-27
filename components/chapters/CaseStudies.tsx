@@ -15,10 +15,10 @@ export function CaseStudies({ onShowArchive }: CaseStudiesProps) {
     <ChapterSection id="case-studies" aria-label="Case Studies" className="flex items-center">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 font-mono mb-4 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-mono mb-4 text-center">
             Case Studies
           </h2>
-          <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
             Featured projects showcasing infrastructure, AI, and full-stack engineering work.
           </p>
         </ScrollReveal>
@@ -41,7 +41,7 @@ export function CaseStudies({ onShowArchive }: CaseStudiesProps) {
           <div className="mt-12 text-center">
             <button
               onClick={onShowArchive}
-              className="inline-flex items-center gap-2 min-h-11 min-w-11 px-6 py-3 rounded-lg border border-slate-700 bg-slate-800/50 text-slate-300 hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-slate-800 transition-all duration-300 cursor-pointer font-mono text-sm"
+              className="inline-flex items-center gap-2 min-h-11 min-w-11 px-6 py-3 rounded-lg border border-slate-200 bg-white/80 text-slate-600 hover:text-cyan-700 hover:border-cyan-300 hover:bg-cyan-50 transition-all duration-300 cursor-pointer font-mono text-sm"
               aria-label="View all projects in archive"
             >
               <Archive size={18} />

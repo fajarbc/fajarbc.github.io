@@ -7,8 +7,8 @@ html, body {
 }
 
 body {
-  background-color: #020617;
-  color: #94a3b8;
+  background-color: #f8fafc;
+  color: #475569;
   font-size: 16px;
   line-height: 1.6;
 }
@@ -17,19 +17,19 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #94a3b8;
 }
 
-/* Focus indicator styles - 3:1+ contrast against dark backgrounds */
+/* Focus indicator styles - 3:1+ contrast against light backgrounds */
 :focus-visible {
-  outline: 2px solid #22d3ee;
+  outline: 2px solid #0891b2;
   outline-offset: 2px;
 }
 
@@ -116,7 +116,7 @@ body {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #334155 transparent transparent transparent;
+  border-color: #e2e8f0 transparent transparent transparent;
 }
 
 /* Easter Egg: Shimmer text effect */

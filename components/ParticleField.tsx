@@ -114,7 +114,7 @@ export function ParticleField() {
         // Draw particle
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(6, 182, 212, ${p.opacity})`;
+        ctx.fillStyle = `rgba(14, 116, 144, ${p.opacity})`;
         ctx.fill();
       }
 
@@ -126,11 +126,11 @@ export function ParticleField() {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < CONNECTION_DISTANCE) {
-            const opacity = (1 - dist / CONNECTION_DISTANCE) * 0.15;
+            const opacity = (1 - dist / CONNECTION_DISTANCE) * 0.2;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(6, 182, 212, ${opacity})`;
+            ctx.strokeStyle = `rgba(14, 116, 144, ${opacity})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

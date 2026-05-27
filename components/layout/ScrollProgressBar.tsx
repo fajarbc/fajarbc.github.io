@@ -13,7 +13,7 @@ export function ScrollProgressBar() {
   return (
     <div
       aria-hidden="true"
-      className="fixed top-0 left-0 z-50 h-[3px] bg-gradient-to-r from-cyan-400 to-blue-500"
+      className="fixed top-0 left-0 z-50 h-[3px] bg-gradient-to-r from-cyan-500 to-blue-600"
       style={{ width: `${progress * 100}%` }}
     />
   );

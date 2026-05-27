@@ -20,39 +20,39 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; className?: s
 
 const colorClasses: Record<string, { border: string; icon: string; pillBg: string; pillBorder: string; pillText: string }> = {
   cyan: {
-    border: 'border-cyan-700/50',
-    icon: 'text-cyan-400',
-    pillBg: 'bg-cyan-950/30',
-    pillBorder: 'border-cyan-800/60',
-    pillText: 'text-cyan-200',
+    border: 'border-cyan-200',
+    icon: 'text-cyan-600',
+    pillBg: 'bg-cyan-50',
+    pillBorder: 'border-cyan-200',
+    pillText: 'text-cyan-700',
   },
   purple: {
-    border: 'border-purple-700/50',
-    icon: 'text-purple-400',
-    pillBg: 'bg-purple-950/30',
-    pillBorder: 'border-purple-800/60',
-    pillText: 'text-purple-200',
+    border: 'border-purple-200',
+    icon: 'text-purple-600',
+    pillBg: 'bg-purple-50',
+    pillBorder: 'border-purple-200',
+    pillText: 'text-purple-700',
   },
   emerald: {
-    border: 'border-emerald-700/50',
-    icon: 'text-emerald-400',
-    pillBg: 'bg-emerald-950/30',
-    pillBorder: 'border-emerald-800/60',
-    pillText: 'text-emerald-200',
+    border: 'border-emerald-200',
+    icon: 'text-emerald-600',
+    pillBg: 'bg-emerald-50',
+    pillBorder: 'border-emerald-200',
+    pillText: 'text-emerald-700',
   },
   blue: {
-    border: 'border-blue-700/50',
-    icon: 'text-blue-400',
-    pillBg: 'bg-blue-950/30',
-    pillBorder: 'border-blue-800/60',
-    pillText: 'text-blue-200',
+    border: 'border-blue-200',
+    icon: 'text-blue-600',
+    pillBg: 'bg-blue-50',
+    pillBorder: 'border-blue-200',
+    pillText: 'text-blue-700',
   },
   orange: {
-    border: 'border-orange-700/50',
-    icon: 'text-orange-400',
-    pillBg: 'bg-orange-950/30',
-    pillBorder: 'border-orange-800/60',
-    pillText: 'text-orange-200',
+    border: 'border-orange-200',
+    icon: 'text-orange-600',
+    pillBg: 'bg-orange-50',
+    pillBorder: 'border-orange-200',
+    pillText: 'text-orange-700',
   },
 };
 
@@ -63,11 +63,11 @@ export function TechCategoryCard({ category, items, pillsRef }: TechCategoryCard
 
   return (
     <div
-      className={`rounded-xl border ${colors.border} bg-slate-900/40 p-5 transition-colors duration-300 hover:bg-slate-900/60`}
+      className={`rounded-xl border ${colors.border} bg-white p-5 transition-colors duration-300 hover:bg-slate-50 shadow-sm`}
     >
       <div className="flex items-center gap-2 mb-4">
         <Icon size={20} className={colors.icon} />
-        <h3 className="text-base font-semibold text-slate-100">{category.title}</h3>
+        <h3 className="text-base font-semibold text-slate-800">{category.title}</h3>
       </div>
       <div className="flex flex-wrap gap-2" ref={pillsRef} data-pills>
         {displayItems.map((item) => (

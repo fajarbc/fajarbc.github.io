@@ -69,7 +69,7 @@ export function Navigation() {
       aria-label="Main navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-900/90 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/20'
+          ? 'bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -79,9 +79,9 @@ export function Navigation() {
           <a
             href="#hero"
             onClick={(e) => handleNavClick(e, 'hero')}
-            className="font-mono text-lg font-bold tracking-tight text-slate-100 hover:text-cyan-400 transition-colors cursor-pointer"
+            className="font-mono text-lg font-bold tracking-tight text-slate-800 hover:text-cyan-600 transition-colors cursor-pointer"
           >
-            Fajar<span className="text-cyan-500">BC</span>
+            Fajar<span className="text-cyan-600">BC</span>
           </a>
 
           {/* Desktop navigation links */}
@@ -93,10 +93,10 @@ export function Navigation() {
                   onClick={(e) => handleNavClick(e, chapter.id)}
                   onKeyDown={(e) => handleKeyDown(e, chapter.id)}
                   aria-current={activeChapterId === chapter.id ? 'true' : undefined}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 ${
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-white ${
                     activeChapterId === chapter.id
-                      ? 'text-cyan-400 bg-cyan-400/10'
-                      : 'text-slate-300 hover:text-white hover:bg-white/10'
+                      ? 'text-cyan-700 bg-cyan-50'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                   }`}
                 >
                   {chapter.label}
@@ -111,7 +111,7 @@ export function Navigation() {
             onClick={toggleMenu}
             aria-expanded={isMobileMenuOpen}
             aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            className="md:hidden inline-flex items-center justify-center min-h-11 min-w-11 p-2 rounded-md text-slate-300 hover:text-white hover:bg-white/10 transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+            className="md:hidden inline-flex items-center justify-center min-h-11 min-w-11 p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-white"
           >
             {isMobileMenuOpen ? (
               <X className="h-6 w-6" aria-hidden="true" />
@@ -124,7 +124,7 @@ export function Navigation() {
 
       {/* Mobile menu dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-white/10 bg-slate-900/95 backdrop-blur-md">
+        <div className="md:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md">
           <ul className="px-4 py-3 space-y-1">
             {chapters.map((chapter) => (
               <li key={chapter.id}>
@@ -133,10 +133,10 @@ export function Navigation() {
                   onClick={(e) => handleNavClick(e, chapter.id)}
                   onKeyDown={(e) => handleKeyDown(e, chapter.id)}
                   aria-current={activeChapterId === chapter.id ? 'true' : undefined}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 ${
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-white ${
                     activeChapterId === chapter.id
-                      ? 'text-cyan-400 bg-cyan-400/10'
-                      : 'text-slate-300 hover:text-white hover:bg-white/10'
+                      ? 'text-cyan-700 bg-cyan-50'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                   }`}
                 >
                   {chapter.label}

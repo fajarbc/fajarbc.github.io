@@ -8,8 +8,8 @@ export const projects: Project[] = [
     category: "Infrastructure"
   },
   {
-    title: "Montiro Smartcar Dashboard",
-    description: "Built realtime Mitsubishi Smart Car emergency monitoring dashboard from scratch. Containerized Docker backend with NodeJS, PHP & WebSocket. Google Cloud SQL MySQL database with CI/CD automation and Terraform infrastructure. Implemented load balancer for high availability with auto-scaling instances.",
+    title: "Montiro Smartcar Projects",
+    description: "Architected and engineered an end-to-end, real-time emergency monitoring dashboard and integration pipeline from scratch for a vehicle telemetry platform. Containerized Docker backend with NodeJS, PHP & WebSocket. Google Cloud SQL MySQL database with CI/CD automation and Terraform infrastructure. Implemented load balancer for high availability with auto-scaling instances.",
     tags: ["NodeJS", "PHP", "WebSocket", "Docker", "GCP", "Terraform", "CI/CD", "Load Balancer"],
     category: "Infrastructure"
   },
@@ -44,19 +44,19 @@ export const projects: Project[] = [
     category: "Infrastructure"
   },
   {
-    title: "IoT Streetlight Dashboard",
+    title: "Real-time Industrial Internet of Things (IoT) Platform",
     description: "Built realtime IoT-based streetlight dashboard with containerized Docker backend using NodeJS & WebSocket for real-time communication. PostgreSQL for transactional data, InfluxDB for timeseries, and MQTT for device communication.",
     tags: ["NodeJS", "WebSocket", "PostgreSQL", "InfluxDB", "MQTT", "Docker"],
     category: "IoT"
   },
   {
-    title: "Flutter Mobile Apps",
-    description: "Build hybrid (Android/iOS) mobile apps with Flutter using BLoC architecture for state management and clean code practices.",
+    title: "Cross-Platform Mobile Architecture",
+    description: "Engineered high-performance hybrid mobile applications across Android and iOS platforms utilizing the Flutter framework. Enforced a strict, highly testable BLoC (Business Logic Component) state-management pattern, cleanly decoupling core data ingestion logic from reactive user interface presentation layers.",
     tags: ["Flutter", "Dart", "BLoC", "Mobile"],
     category: "Mobile"
   },
   {
-    title: "Olakata Mobile Game API & Dashboard",
+    title: "Olakata Gamified Ecosystem",
     description: "Built Olakata (Crosswords Mobile Game) API & admin dashboard to manage application settings and contents. Implemented crosswords gamification OOP logic with automated CI/CD using GitHub Actions.",
     tags: ["Admin Dashboard", "OOP", "Gamification", "GitHub Actions"],
     category: "Gaming"
@@ -80,8 +80,8 @@ export const projects: Project[] = [
     category: "IoT"
   },
   {
-    title: "Robotic Club Leadership",
-    description: "Coordinated and led technical trainings as Head of Robotic Club of Physics. Designed and assembled robotics line-followers & digital scoreboard system.",
+    title: "Head of Robotic Club of Physics",
+    description: "Directed departmental technical operations and led embedded systems training modules. Designed, programmed, and assembled autonomous line-following robotics and digital scoreboard architecture.",
     tags: ["Robotics", "Leadership", "Training", "Electronics"],
     category: "IoT"
   },
@@ -111,7 +111,7 @@ export const socialLinks = [
 export const techCategories: TechCategory[] = [
   {
     title: "Cloud Native & DevOps",
-    items: ["Docker", "AWS", "GCP", "Terraform", "RabbitMQ", "GitLab CI/CD", "GitHub Actions", "Bash Scripting", "Nginx", "GKE (Kubernetes)"],
+    items: ["Docker", "AWS", "GCP", "Terraform", "GitLab CI/CD", "GitHub Actions", "Bash Scripting", "Nginx", "GKE (Kubernetes)"],
     color: "cyan"
   },
   {
@@ -121,17 +121,17 @@ export const techCategories: TechCategory[] = [
   },
   {
     title: "Core Backend",
-    items: ["Node.js", "Go (Golang)", "PHP", "Python", "MySQL", "PostgreSQL", "InfluxDB", "MongoDB", "Redis", "GraphQL", "gRPC"],
+    items: ["Node.js", "Go (Golang)", "PHP", "Python", "MySQL", "PostgreSQL", "InfluxDB", "MongoDB", "Redis", "GraphQL", "gRPC", "RabbitMQ", "WebRTC", "Websocket"],
     color: "emerald"
   },
   {
     title: "Frontend & Mobile",
-    items: ["React", "TypeScript", "Vite", "Tailwind", "Bootstrap", "PWA", "Flutter", "Websocket", "REST APIs"],
+    items: ["Javascript", "React", "TypeScript", "Vite", "Tailwind", "Bootstrap", "PWA", "Flutter", "jQuery", "REST APIs"],
     color: "blue"
   },
   {
     title: "Monitoring & Observability",
-    items: ["Prometheus", "Grafana", "Node Exporter", "Alertmanager", "CloudWatch"],
+    items: ["Prometheus", "Grafana", "Node Exporter", "Alertmanager", "CloudWatch", "VictoriaMetrics"],
     color: "orange"
   }
 ];

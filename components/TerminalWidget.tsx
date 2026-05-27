@@ -361,7 +361,7 @@ export function TerminalWidget() {
         </div>
       </div>
       {isInteractive && (
-        <p className="text-center text-xs text-slate-600 mt-2 font-mono">
+        <p className="text-center text-xs text-slate-400 mt-2 font-mono">
           Tip: Try 'help' for commands. Click the <span className="text-emerald-500">●</span> to expand, <span className="text-amber-500">●</span> to collapse, <span className="text-red-500">●</span> to rage quit.
         </p>
       )}

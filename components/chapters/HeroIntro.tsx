@@ -90,7 +90,7 @@ export function HeroIntro() {
           className="h-full w-full"
           style={{
             background:
-              'linear-gradient(135deg, #020617 0%, #0c1929 30%, #0f2a3d 50%, #061520 70%, #020617 100%)',
+              'linear-gradient(135deg, #f8fafc 0%, #e0f2fe 30%, #cffafe 50%, #ecfeff 70%, #f8fafc 100%)',
             backgroundSize: '200% 200%',
             animation: reducedMotion ? 'none' : 'gradientShift 12s ease infinite',
           }}
@@ -113,20 +113,20 @@ export function HeroIntro() {
             {/* Available for hire badge */}
             {isAvailableForHire && (
               <div className="mb-6">
-                <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
-                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
+                <span className="inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50 px-4 py-1.5 text-sm text-emerald-700">
+                  <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
                   Available for hire
                 </span>
               </div>
             )}
 
             {/* Developer name */}
-            <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight">
               {fullName}
             </h1>
 
             {/* Role title */}
-            <p className="mt-4 text-xl md:text-2xl text-slate-300">
+            <p className="mt-4 text-xl md:text-2xl text-slate-600">
               {jobTitle}
             </p>
 
