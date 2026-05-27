@@ -84,6 +84,13 @@ export const projects: Project[] = [
     description: "Coordinated and led technical trainings as Head of Robotic Club of Physics. Designed and assembled robotics line-followers & digital scoreboard system.",
     tags: ["Robotics", "Leadership", "Training", "Electronics"],
     category: "IoT"
+  },
+  {
+    title: "LuringTalk",
+    description: "A real-time chat application built with modern web technologies. Features include instant messaging, room-based conversations, and responsive UI for seamless communication.",
+    tags: ["Real-time", "WebSocket", "Chat", "JavaScript"],
+    link: "https://fajarbc.com/luring-talk",
+    category: "Infrastructure"
   }
 ];
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, FolderGit2, Cpu, Activity, Smartphone, Gamepad2 } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, FolderGit2, Cpu, Activity, Smartphone, Gamepad2 } from 'lucide-react';
 import { Project } from '../types';
 
 interface ProjectCardProps {
@@ -18,8 +18,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     }
   };
 
-  const cardContent = (
-    <div className="group relative rounded-xl border border-slate-800 bg-slate-900/50 p-6 hover:bg-slate-800/80 transition-all duration-300 overflow-hidden cursor-pointer h-full">
+  return (
+    <div className="group relative rounded-xl border border-slate-800 bg-slate-900/50 p-6 hover:bg-slate-800/80 transition-all duration-300 overflow-hidden h-full">
       {/* Gradient overlay on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -28,21 +28,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className="p-2 rounded-lg bg-slate-800 border border-slate-700">
             {getIcon(project.category)}
           </div>
-          <ArrowUpRight className="text-slate-600 group-hover:text-cyan-400 transition-colors duration-300" size={20} />
+          {project.link && (
+            <ArrowUpRight className="text-slate-600 group-hover:text-cyan-400 transition-colors duration-300" size={20} />
+          )}
         </div>
 
-        {/* Full title — no truncation */}
+        {/* Full title */}
         <h3 className="text-lg font-bold text-slate-100 mb-2 font-mono group-hover:text-cyan-400 transition-colors duration-300">
           {project.title}
         </h3>
 
-        {/* Full description — no truncation */}
+        {/* Full description */}
         <p className="text-sm text-slate-400 mb-6 leading-relaxed flex-grow">
           {project.description}
         </p>
 
-        {/* All tags as pill-shaped elements */}
-        <div className="flex flex-wrap gap-2 mt-auto">
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
               key={tag}
@@ -52,26 +54,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </span>
           ))}
         </div>
+
+        {/* View Project button */}
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-sm font-mono hover:bg-cyan-500/20 hover:border-cyan-500/50 transition-all duration-200 cursor-pointer w-fit"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <ExternalLink size={14} />
+            View Project
+          </a>
+        )}
       </div>
     </div>
   );
-
-  // If project has a link, wrap in an anchor tag
-  if (project.link) {
-    return (
-      <a
-        href={project.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block h-full"
-        aria-label={`View project: ${project.title}`}
-      >
-        {cardContent}
-      </a>
-    );
-  }
-
-  return cardContent;
 };
 
 export default ProjectCard;

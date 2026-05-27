@@ -109,7 +109,7 @@ export function HeroIntro() {
           className="h-full w-full flex flex-col items-center justify-center px-6 text-center"
           style={{ opacity: reducedMotion ? 1 : opacity }}
         >
-          <div style={entranceStyle}>
+          <div className="w-full" style={entranceStyle}>
             {/* Available for hire badge */}
             {isAvailableForHire && (
               <div className="mb-6">

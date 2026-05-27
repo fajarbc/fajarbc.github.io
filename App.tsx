@@ -12,8 +12,24 @@ import ProjectsArchive from '@/components/ProjectsArchive';
 function App() {
   const [showArchive, setShowArchive] = useState(false);
 
+  const handleShowArchive = () => {
+    setShowArchive(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleBackToHome = () => {
+    setShowArchive(false);
+    // Wait for DOM to render, then scroll to projects section
+    setTimeout(() => {
+      const el = document.getElementById('case-studies');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   if (showArchive) {
-    return <ProjectsArchive onBack={() => setShowArchive(false)} />;
+    return <ProjectsArchive onBack={handleBackToHome} />;
   }
 
   return (
@@ -23,7 +39,7 @@ function App() {
       <ParallaxContainer>
         <HeroIntro />
         <TechArsenal />
-        <CaseStudies onShowArchive={() => setShowArchive(true)} />
+        <CaseStudies onShowArchive={handleShowArchive} />
         <Contact />
         <Footer />
       </ParallaxContainer>

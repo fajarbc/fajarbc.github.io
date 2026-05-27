@@ -153,6 +153,10 @@ body {
   animation: rumble 0.1s linear infinite;
 }
 
+.animate-shake {
+  animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
+}
+
 .animate-grow {
   animation: grow 3s ease-out forwards;
 }
