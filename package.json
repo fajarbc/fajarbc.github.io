@@ -23,7 +23,7 @@
     "@testing-library/react": "^16.x",
     "@types/matter-js": "^0.20.2",
     "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
+    "@vitejs/plugin-react": "^6.0.2",
     "autoprefixer": "^10.4.23",
     "fast-check": "^3.x",
     "gh-pages": "^6.1.1",
