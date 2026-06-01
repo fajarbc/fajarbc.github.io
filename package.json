@@ -27,7 +27,7 @@
     "autoprefixer": "^10.4.23",
     "fast-check": "^3.x",
     "gh-pages": "^6.1.1",
-    "jsdom": "^25.x",
+    "jsdom": "^29.x",
     "tailwindcss": "^4.1.18",
     "typescript": "~5.8.2",
     "vite": "^6.2.0",
