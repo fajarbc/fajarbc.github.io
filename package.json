@@ -28,7 +28,7 @@
     "fast-check": "^3.x",
     "gh-pages": "^6.1.1",
     "jsdom": "^25.x",
-    "tailwindcss": "^4.1.18",
+    "tailwindcss": "^4.3.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0",
     "vitest": "^3.x"
