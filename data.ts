@@ -5,6 +5,7 @@ export const projects: Project[] = [
     title: "NielAI Infrastructure",
     description: "Designed, developed, and deployed production-ready AI system from scratch. Migrated legacy infrastructure from Docker Swarm to GKE, enabling auto-scaling capabilities for high-load AI inference requests reducing latency by 40%.",
     tags: ["GKE", "Kubernetes", "Docker", "GCP", "DevOps", "AI System"],
+    link: "https://enbmobile.com.my",
     category: "Infrastructure"
   },
   {
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     title: "Montiro Smartcar Projects",
     description: "Architected and engineered an end-to-end, real-time emergency monitoring dashboard and integration pipeline from scratch for a vehicle telemetry platform. Containerized Docker backend with NodeJS, PHP & WebSocket. Google Cloud SQL MySQL database with CI/CD automation and Terraform infrastructure. Implemented load balancer for high availability with auto-scaling instances.",
     tags: ["NodeJS", "PHP", "WebSocket", "Docker", "GCP", "Terraform", "CI/CD", "Load Balancer"],
+    link: "https://montiro.id",
     category: "Infrastructure"
   },
   {
