@@ -27,7 +27,7 @@ export function CaseStudies({ onShowArchive }: CaseStudiesProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredProjects.map((project, index) => {
             return (
-              <div key={project.title}>
+              <div key={project.title} className={index === 3 ? 'lg:hidden' : ''}>
                 <ScrollReveal delay={index * 150} className="h-full">
                   <ProjectCard project={project} />
                 </ScrollReveal>
