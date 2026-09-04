@@ -38,7 +38,7 @@ export function SpriteAnimation({
   className = '',
 }: SpriteAnimationProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const mouseRef = useRef({ x: -1, y: -1 });
+  const pointerRef = useRef({ x: -1, y: -1 });
   const [frame, setFrame] = useState(4); // idle/front
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const reducedMotion = useReducedMotion();
@@ -68,24 +68,24 @@ export function SpriteAnimation({
     return 4;
   }, []);
 
-  const handleMouseMove = useCallback(
-    (e: MouseEvent) => {
+  const updateFromPointer = useCallback(
+    (clientX: number, clientY: number) => {
       if (reducedMotion || !containerRef.current) return;
 
-      // Store last known cursor position
-      mouseRef.current = { x: e.clientX, y: e.clientY };
+      // Store last known pointer position
+      pointerRef.current = { x: clientX, y: clientY };
 
       const rect = containerRef.current.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
       const centerY = rect.top + rect.height / 2;
 
-      const dx = e.clientX - centerX;
-      const dy = e.clientY - centerY;
+      const dx = clientX - centerX;
+      const dy = clientY - centerY;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
       setFrame(getDirectionFrame(dx, dy, distance));
 
-      // Gentle lean toward cursor (max 10px)
+      // Gentle lean toward pointer (max 10px)
       const maxOffset = 10;
       const factor = Math.min(distance / 400, 1);
       setOffset({
@@ -96,11 +96,24 @@ export function SpriteAnimation({
     [reducedMotion, getDirectionFrame]
   );
 
-  // Recalculate direction on scroll (sprite moves but cursor stays)
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => updateFromPointer(e.clientX, e.clientY),
+    [updateFromPointer]
+  );
+
+  const handleTouchMove = useCallback(
+    (e: TouchEvent) => {
+      const t = e.touches[0];
+      if (t) updateFromPointer(t.clientX, t.clientY);
+    },
+    [updateFromPointer]
+  );
+
+  // Recalculate direction on scroll (sprite moves but pointer stays)
   const handleScroll = useCallback(() => {
     if (reducedMotion || !containerRef.current) return;
-    const { x, y } = mouseRef.current;
-    if (x === -1) return; // no cursor tracked yet
+    const { x, y } = pointerRef.current;
+    if (x === -1) return; // no pointer tracked yet
 
     const rect = containerRef.current.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
@@ -120,8 +133,8 @@ export function SpriteAnimation({
     });
   }, [reducedMotion, getDirectionFrame]);
 
-  const handleMouseLeave = useCallback(() => {
-    mouseRef.current = { x: -1, y: -1 };
+  const handlePointerLeave = useCallback(() => {
+    pointerRef.current = { x: -1, y: -1 };
     setFrame(4);
     setOffset({ x: 0, y: 0 });
   }, []);
@@ -129,15 +142,27 @@ export function SpriteAnimation({
   useEffect(() => {
     if (reducedMotion) return;
 
-    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    const isTouch = window.matchMedia('(pointer: coarse)').matches;
+
+    if (isTouch) {
+      window.addEventListener('touchmove', handleTouchMove, { passive: true });
+      window.addEventListener('touchend', handlePointerLeave);
+    } else {
+      window.addEventListener('mousemove', handleMouseMove, { passive: true });
+      document.addEventListener('mouseleave', handlePointerLeave);
+    }
     window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('mouseleave', handleMouseLeave);
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      if (isTouch) {
+        window.removeEventListener('touchmove', handleTouchMove);
+        window.removeEventListener('touchend', handlePointerLeave);
+      } else {
+        window.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mouseleave', handlePointerLeave);
+      }
       window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [handleMouseMove, handleMouseLeave, handleScroll, reducedMotion]);
+  }, [handleMouseMove, handleTouchMove, handlePointerLeave, handleScroll, reducedMotion]);
 
   const col = frame % columns;
   const row = Math.floor(frame / columns);

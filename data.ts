@@ -8,10 +8,24 @@ export const projects: Project[] = [
     category: "Infrastructure"
   },
   {
+    title: "LessOTP",
+    description: "Built a B2B inbound phone authentication platform for developers, enabling passwordless verification through WhatsApp and Telegram without traditional OTP codes.",
+    tags: ["Authentication", "API", "WhatsApp", "Telegram", "Next.js", "Bun", "Docker"],
+    link: "https://lessotp.com",
+    category: "Infrastructure"
+  },
+  {
     title: "Montiro Smartcar Projects",
     description: "Architected and engineered an end-to-end, real-time emergency monitoring dashboard and integration pipeline from scratch for a vehicle telemetry platform. Containerized Docker backend with NodeJS, PHP & WebSocket. Google Cloud SQL MySQL database with CI/CD automation and Terraform infrastructure. Implemented load balancer for high availability with auto-scaling instances.",
     tags: ["NodeJS", "PHP", "WebSocket", "Docker", "GCP", "Terraform", "CI/CD", "Load Balancer"],
     category: "Infrastructure"
+  },
+  {
+    title: "Jadi Sultan",
+    description: "Built a map-based social competition web app where players compete to claim Indonesian cities and become the Sultan of their region.",
+    tags: ["Social Game", "Interactive Map", "Geospatial", "Next.js", "Bun", "WebSocket", "PostgreSQL", "Docker"],
+    link: "https://jadisultan.id",
+    category: "Gaming"
   },
   {
     title: "Multi-Cloud Infrastructure Management",
@@ -91,6 +105,13 @@ export const projects: Project[] = [
     tags: ["Real-time", "WebSocket", "Chat", "JavaScript"],
     link: "https://fajarbc.com/luring-talk",
     category: "Infrastructure"
+  },
+  {
+    title: "SMSOTP.app",
+    description: "Built an Indonesian virtual phone number platform for fast and reliable SMS OTP verification with local payment support.",
+    tags: ["SMS", "OTP", "Virtual Number", "Payment", "Next.js", "Bun", "Docker"],
+    link: "https://smsotp.app",
+    category: "Infrastructure"
   }
 ];
 
@@ -116,12 +137,12 @@ export const techCategories: TechCategory[] = [
   },
   {
     title: "AI & Data Engineering",
-    items: ["YOLO", "TensorFlow", "Computer Vision", "LLM", "MLflow", "AI Inference Serving"],
+    items: ["YOLO", "TensorFlow", "Computer Vision", "LLM", "MLflow", "AI Inference Serving", "AI Native"],
     color: "purple"
   },
   {
     title: "Core Backend",
-    items: ["Node.js", "Go (Golang)", "PHP", "Python", "MySQL", "PostgreSQL", "InfluxDB", "MongoDB", "Redis", "GraphQL", "gRPC", "RabbitMQ", "WebRTC", "Websocket"],
+    items: ["Bun", "Node.js", "Go (Golang)", "PHP", "Python", "MySQL", "PostgreSQL", "InfluxDB", "MongoDB", "Redis", "GraphQL", "gRPC", "RabbitMQ", "WebRTC", "Websocket"],
     color: "emerald"
   },
   {

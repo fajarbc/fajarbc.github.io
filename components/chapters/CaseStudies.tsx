@@ -9,7 +9,7 @@ interface CaseStudiesProps {
 }
 
 export function CaseStudies({ onShowArchive }: CaseStudiesProps) {
-  const featuredProjects = projects.slice(0, 3);
+  const featuredProjects = projects.slice(0, 4); // Display only the first 4 projects as featured
 
   return (
     <ChapterSection id="case-studies" aria-label="Case Studies" className="flex items-center">
