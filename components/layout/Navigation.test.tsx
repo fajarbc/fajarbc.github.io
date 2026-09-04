@@ -52,7 +52,7 @@ describe('Navigation', () => {
 
     const homeLinks = screen.getAllByText('Home');
     const desktopLink = homeLinks[0];
-    expect(desktopLink.className).toContain('text-cyan-400');
+    expect(desktopLink.className).toContain('text-cyan-700');
   });
 
   it('does not set aria-current on inactive links', () => {
