@@ -276,6 +276,7 @@ export function TechArsenal() {
             {/* Physics Easter Egg Button */}
             <div className="relative group">
               <button
+                type="button"
                 onClick={triggerBlackHole}
                 disabled={isPhysicsActive}
                 className="relative cursor-pointer px-4 py-2 rounded-lg border border-slate-200 bg-white/80 text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 bg-[length:400%_100%] animate-shimmer hover:border-purple-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
@@ -290,6 +291,7 @@ export function TechArsenal() {
             {/* Sort Easter Egg Button */}
             <div className="relative group">
               <button
+                type="button"
                 onClick={handleSort}
                 disabled={isAnimating}
                 className="relative cursor-pointer px-4 py-2 rounded-lg border border-slate-200 bg-white/80 text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-emerald-500 to-cyan-600 bg-[length:400%_100%] animate-shimmer hover:border-cyan-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"

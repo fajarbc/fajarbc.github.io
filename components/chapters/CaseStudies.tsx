@@ -40,6 +40,7 @@ export function CaseStudies({ onShowArchive }: CaseStudiesProps) {
         <ScrollReveal delay={featuredProjects.length * 150}>
           <div className="mt-12 text-center">
             <button
+              type="button"
               onClick={onShowArchive}
               className="inline-flex items-center gap-2 min-h-11 min-w-11 px-6 py-3 rounded-lg border border-slate-200 bg-white/80 text-slate-600 hover:text-cyan-700 hover:border-cyan-300 hover:bg-cyan-50 transition-all duration-300 cursor-pointer font-mono text-sm"
               aria-label="View all projects in archive"
