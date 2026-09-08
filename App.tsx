@@ -12,6 +12,7 @@ import ProjectsArchive from '@/components/ProjectsArchive';
 import { ProjectDetail } from '@/src/components/pages/ProjectDetail';
 import { WritingArchive } from '@/src/components/pages/WritingArchive';
 import { ArticleDetail } from '@/src/components/pages/ArticleDetail';
+import { ArchitectureDemo } from '@/src/components/pages/ArchitectureDemo';
 
 const HomePage: React.FC = () => {
   return (
@@ -38,6 +39,7 @@ export function App() {
         <Route path="/work/:slug" component={ProjectDetail} />
         <Route path="/writing" component={WritingArchive} />
         <Route path="/writing/:slug" component={ArticleDetail} />
+        <Route path="/architecture/:slug" component={ArchitectureDemo} />
         <Route>
           <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-700 p-4">
             <div className="text-center font-mono">

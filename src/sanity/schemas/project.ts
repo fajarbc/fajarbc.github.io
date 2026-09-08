@@ -11,6 +11,7 @@ export const ProjectSchema = z.object({
   category: z.string(),
   tags: z.array(z.string()).default([]),
   link: z.string().url().optional(),
+  architecturePath: z.string().optional(),
   featured: z.boolean().default(false),
   coverImageUrl: z.string().url().optional(),
   body: z.array(z.any()).optional(),

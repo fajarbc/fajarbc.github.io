@@ -5,6 +5,7 @@ export interface Project {
   description: string;
   tags: string[];
   link?: string;
+  architecturePath?: string;
   category: 'Infrastructure' | 'AI' | 'IoT' | 'Mobile' | 'Gaming';
 }
 

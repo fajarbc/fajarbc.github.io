@@ -13,6 +13,7 @@ export const projects: Project[] = [
     description: "Built a B2B inbound phone authentication platform for developers, enabling passwordless verification through WhatsApp and Telegram without traditional OTP codes.",
     tags: ["Authentication", "API", "WhatsApp", "Telegram", "Next.js", "Bun", "Docker"],
     link: "https://lessotp.com",
+    architecturePath: "/architecture/lessotp",
     category: "Infrastructure"
   },
   {
@@ -103,9 +104,10 @@ export const projects: Project[] = [
   },
   {
     title: "LuringTalk",
-    description: "A real-time chat application built with modern web technologies. Features include instant messaging, room-based conversations, and responsive UI for seamless communication.",
-    tags: ["Real-time", "WebSocket", "Chat", "JavaScript"],
+    description: "Built an offline peer-to-peer voice and video calling PWA for two devices on the same local Wi-Fi network. WebRTC carries encrypted media directly between browsers while compressed SDP offers and answers are exchanged through QR codes, requiring no signaling server or Internet connection.",
+    tags: ["WebRTC", "PWA", "QR Code", "React", "TypeScript", "Vite", "Local Network"],
     link: "https://fajarbc.com/luring-talk",
+    architecturePath: "/architecture/luringtalk",
     category: "Infrastructure"
   },
   {

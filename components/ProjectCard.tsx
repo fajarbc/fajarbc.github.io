@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, ExternalLink, FolderGit2, Cpu, Activity, Smartphone, Gamepad2 } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, Network, FolderGit2, Cpu, Activity, Smartphone, Gamepad2 } from 'lucide-react';
 import { Project } from '../types';
 
 interface ProjectCardProps {
@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className="p-2 rounded-lg bg-slate-50 border border-slate-200">
             {getIcon(project.category)}
           </div>
-          {project.link && (
+          {(project.link || project.architecturePath) && (
             <ArrowUpRight className="text-slate-300 group-hover:text-cyan-600 transition-colors duration-300" size={20} />
           )}
         </div>
@@ -55,18 +55,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           ))}
         </div>
 
-        {/* View Project button */}
-        {project.link && (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg border border-cyan-200 bg-cyan-50 text-cyan-700 text-sm font-mono hover:bg-cyan-100 hover:border-cyan-300 transition-all duration-200 cursor-pointer w-fit"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <ExternalLink size={14} />
-            View Project
-          </a>
+        {/* Action buttons */}
+        {(project.link || project.architecturePath) && (
+          <div className="flex flex-wrap gap-2 mt-4">
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-cyan-200 bg-cyan-50 text-cyan-700 text-sm font-mono hover:bg-cyan-100 hover:border-cyan-300 transition-all duration-200 cursor-pointer w-fit"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <ExternalLink size={14} />
+                View Project
+              </a>
+            )}
+            {project.architecturePath && (
+              <a
+                href={project.architecturePath}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-purple-200 bg-purple-50 text-purple-700 text-sm font-mono hover:bg-purple-100 hover:border-purple-300 transition-all duration-200 cursor-pointer w-fit"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Network size={14} />
+                Architecture
+              </a>
+            )}
+          </div>
         )}
       </div>
     </div>

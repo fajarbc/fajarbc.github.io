@@ -26,6 +26,7 @@ function mapLocalProjects(): Project[] {
     category: p.category,
     tags: p.tags,
     link: p.link,
+    architecturePath: p.architecturePath,
     featured: idx < 4,
     body: [
       {

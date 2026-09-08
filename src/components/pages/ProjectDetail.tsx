@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRoute, Link } from 'wouter';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Network } from 'lucide-react';
 import { fetchProjectBySlug } from '@/src/lib/sanity/client';
 import { type Project } from '@/src/sanity/schemas/project';
 import { PortableTextRenderer } from '@/src/components/content/PortableTextRenderer';
@@ -72,15 +72,27 @@ export const ProjectDetail: React.FC = () => {
             </span>
           ))}
         </div>
-        {project.link && (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-50 border border-cyan-200 text-cyan-700 font-mono text-sm hover:bg-cyan-100 transition-colors"
-          >
-            <ExternalLink size={16} /> Live Project
-          </a>
+        {(project.link || project.architecturePath) && (
+          <div className="flex flex-wrap gap-2">
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-50 border border-cyan-200 text-cyan-700 font-mono text-sm hover:bg-cyan-100 transition-colors"
+              >
+                <ExternalLink size={16} /> Live Project
+              </a>
+            )}
+            {project.architecturePath && (
+              <Link
+                href={project.architecturePath}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-50 border border-purple-200 text-purple-700 font-mono text-sm hover:bg-purple-100 transition-colors"
+              >
+                <Network size={16} /> Architecture
+              </Link>
+            )}
+          </div>
         )}
       </header>
 
