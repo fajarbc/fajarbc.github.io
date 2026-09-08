@@ -83,7 +83,7 @@ export function HeroIntro() {
       };
 
   return (
-    <ChapterSection id="hero" aria-label="Introduction" className="relative overflow-hidden">
+    <ChapterSection id="hero" aria-label="Introduction" className="relative overflow-hidden min-h-[calc(100svh-4rem)]">
       {/* Background layer - animated gradient */}
       <ParallaxLayer speed={0.3} className="absolute inset-0 z-0">
         <div
@@ -106,7 +106,7 @@ export function HeroIntro() {
       {/* Foreground layer - main content */}
       <ParallaxLayer speed={1.0} className="absolute inset-0 z-20">
         <div
-          className="h-full w-full flex flex-col items-center justify-center px-6 text-center"
+          className="h-full w-full flex flex-col items-center justify-start px-4 sm:px-6 pt-8 sm:pt-10 md:pt-14 lg:pt-16 text-center"
           style={{ opacity: reducedMotion ? 1 : opacity }}
         >
           <div className="w-full" style={entranceStyle}>
@@ -121,12 +121,12 @@ export function HeroIntro() {
             )}
 
             {/* Developer name */}
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-tight">
               {fullName}
             </h1>
 
             {/* Role title */}
-            <p className="mt-4 text-xl md:text-2xl text-slate-600">
+            <p className="mt-2 sm:mt-3 text-base sm:text-xl md:text-2xl text-slate-600">
               {jobTitle}
             </p>
 

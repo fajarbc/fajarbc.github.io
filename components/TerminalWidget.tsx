@@ -265,9 +265,9 @@ export function TerminalWidget() {
 
   return (
     <div
-      className="mx-auto mt-8 w-full"
+      className="mx-auto mt-5 sm:mt-8 w-full"
       style={{
-        maxWidth: isExpanded ? 'calc(100vw - 3rem)' : '48rem',
+        maxWidth: isExpanded ? 'calc(100vw - 2rem)' : '48rem',
         transition: 'max-width 400ms cubic-bezier(0.4, 0, 0.2, 1)',
       }}
       onClick={() => inputRef.current?.focus()}
@@ -308,7 +308,7 @@ export function TerminalWidget() {
         {/* Terminal body */}
         <div
           ref={containerRef}
-          className={`p-6 font-mono text-sm md:text-base overflow-y-auto flex flex-col justify-start scroll-smooth text-left ${isExpanded ? 'h-[28rem]' : 'h-72'}`}
+          className={`p-4 sm:p-6 font-mono text-xs sm:text-sm md:text-base overflow-y-auto flex flex-col justify-start scroll-smooth text-left ${isExpanded ? 'h-[24rem] sm:h-[28rem]' : 'h-60 sm:h-72'}`}
           style={{ transition: 'height 400ms ease' }}
         >
           {/* History Lines */}
